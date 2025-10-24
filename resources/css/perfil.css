@@ -1,0 +1,104 @@
+/* PERFIL: estilos visuales modernos */
+.hover-card {
+    transition: all 0.25s ease-in-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+hr {
+    border-top: 3px solid var(--bs-primary);
+    opacity: 0.8;
+}
+
+/* Mejoras responsivas */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1.2rem !important;
+    }
+}
+
+/* Soporte para modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+    }
+
+    .card-header {
+        opacity: 0.9;
+    }
+
+    hr {
+        border-top-color: #0d6efd;
+    }
+}
+
+
+/* === FORMULARIO DE PERFIL === */
+
+.perfil-section {
+    animation: fadeInUp 0.3s ease;
+}
+
+.perfil-form input.form-control {
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.9rem;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.perfil-form input.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.perfil-form label {
+    color: #333;
+}
+
+.perfil-form button.btn-link {
+    font-size: 0.875rem;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(3px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .perfil-form input.form-control {
+        background-color: #eae9e9;
+        color: #0e0d0d;
+        border-color: #333;
+    }
+    .perfil-form input.form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+    .perfil-form label {
+        color: #1b1a1a;
+    }
+}
